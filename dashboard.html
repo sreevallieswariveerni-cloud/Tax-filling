@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ledgerly | Client Dashboard</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="images/logo_transparent_image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+</head>
+<body>
+
+<main class="dashboard-page">
+
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+
+    <!-- TOPBAR -->
+   
+<!-- TOPBAR -->
+<header class="topbar">
+
+    <label for="sidebar-toggle" class="menu-button" aria-label="Open navigation">
+        <i data-lucide="menu"></i>
+    </label>
+
+    <a href="index.html" class="topbar-brand">
+        <img src="images/logo_transparent_image.png" alt="Ledgerly logo">
+        <span>Ledger<span class="gold">ly</span></span>
+    </a>
+
+    <div class="topbar-title">
+        <strong id="page-title">Overview</strong>
+    </div>
+
+    <div class="top-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+            <i data-lucide="moon"></i>
+        </button>
+
+        <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL">
+            <i data-lucide="languages"></i>
+        </button>
+
+        <button class="icon-btn" id="notification-btn" aria-label="Notifications">
+            <i data-lucide="bell"></i>
+        </button>
+
+        <span class="avatar">S</span>
+
+        <span class="user-info">
+            <b>Srinidhi</b>
+            <small>Client account</small>
+        </span>
+    </div>
+</header>
+
+
+    <label for="sidebar-toggle" class="overlay" aria-label="Close navigation"></label>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+<!-- 
+      <a href="index.html" class="brand">
+    <img src="images/logo_transparent_image.png" alt="Ledgerly logo" class="brand-image">
+    <span class="brand-name">Ledger<span class="gold">ly</span></span>
+</a> -->
+
+        <div class="sidebar-nav">
+            <small class="nav-label">WORKSPACE</small>
+
+            <nav>
+                <a href="#overview" class="nav-item active" data-section="overview">
+                    <i data-lucide="layout-dashboard"></i>
+                    Overview
+                </a>
+
+                <a href="#documents" class="nav-item" data-section="documents">
+                    <i data-lucide="files"></i>
+                    My Documents
+                    <span id="doc-count">4</span>
+                </a>
+
+                <a href="#filings" class="nav-item" data-section="filings">
+                    <i data-lucide="file-check-2"></i>
+                    Tax Returns
+                </a>
+
+                <a href="#activity" class="nav-item" data-section="activity">
+                    <i data-lucide="history"></i>
+                    Recent Activity
+                </a>
+            </nav>
+
+            <small class="nav-label account-label">ACCOUNT</small>
+
+            <nav>
+                <a href="#profile" class="nav-item" data-section="profile">
+                    <i data-lucide="user-round"></i>
+                    My Profile
+                </a>
+
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <i data-lucide="settings-2"></i>
+                    Settings
+                </a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="help-card">
+                <i data-lucide="messages-square"></i>
+                <span>
+                    <b>Need a hand?</b>
+                    <small>Our team is here to help.</small>
+                    <a href="contact.html">Contact support ↗</a>
+                </span>
+            </div>
+
+            <button id="logout-btn" class="nav-item logout">
+                <i data-lucide="log-out"></i>
+                Sign out
+            </button>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- OVERVIEW -->
+        <section class="page-section active" id="overview" data-title="Overview">
+
+            <div class="page-heading">
+                <div>
+                    <small class="eyebrow">YOUR FINANCIAL WORKSPACE</small>
+                    <h1>Welcome back, Srinidhi.</h1>
+                    <p>Here’s what’s happening with your documents and tax filings.</p>
+                </div>
+
+                <button class="button primary" data-open="documents">
+                    <i data-lucide="upload"></i>
+                    Upload document
+                </button>
+            </div>
+
+            <div class="welcome">
+                <div>
+                    <small>✦ YOUR TAXES, MADE SIMPLER</small>
+                    <h2>Stay organised.<br><em>Feel confident.</em></h2>
+                    <p>
+                        Keep your paperwork in one place and stay up to date
+                        on every filing milestone.
+                    </p>
+                    <button class="button light" data-open="filings">
+                        View filing status ↗
+                    </button>
+                </div>
+
+                <div class="welcome-art">
+                    <i data-lucide="file-check-2"></i>
+                    <span>✓ One step at a time</span>
+                </div>
+            </div>
+
+            <div class="stats">
+                <article class="stat">
+                    <span>Total documents</span>
+                    <i data-lucide="files"></i>
+                    <strong id="total-docs">4</strong>
+                    <small>Across your workspace</small>
+                </article>
+
+                <article class="stat">
+                    <span>Awaiting review</span>
+                    <i data-lucide="clock-3"></i>
+                    <strong id="pending-docs">2</strong>
+                    <small>Needs attention</small>
+                </article>
+
+                <article class="stat">
+                    <span>Filed returns</span>
+                    <i data-lucide="file-check"></i>
+                    <strong>2</strong>
+                    <small>Successfully filed</small>
+                </article>
+
+                <article class="stat">
+                    <span>Next deadline</span>
+                    <i data-lucide="calendar-clock"></i>
+                    <strong class="date-stat">31 Jul</strong>
+                    <small>Sample deadline</small>
+                </article>
+            </div>
+
+            <div class="columns">
+
+                <article class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <small class="eyebrow">TAX FILING</small>
+                            <h2>Filing progress</h2>
+                        </div>
+                        <button class="text-btn" data-open="filings">View all ↗</button>
+                    </div>
+
+                    <div class="progress-row">
+                        <i data-lucide="file-text"></i>
+                        <div>
+                            <b>Income Tax Return</b>
+                            <small>Financial year 2025–26</small>
+                            <div class="progress"><span style="width:72%"></span></div>
+                            <small>72% complete</small>
+                        </div>
+                        <span class="pill review">In review</span>
+                    </div>
+
+                    <div class="progress-row">
+                        <i data-lucide="receipt-text"></i>
+                        <div>
+                            <b>GST Return</b>
+                            <small>Quarter 1 · FY 2026–27</small>
+                            <div class="progress">
+                                <span class="gold-bar" style="width:35%"></span>
+                            </div>
+                            <small>35% complete</small>
+                        </div>
+                        <span class="pill pending">Pending</span>
+                    </div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-head">
+                        <div>
+                            <small class="eyebrow">YOUR NEXT STEPS</small>
+                            <h2>To-do list</h2>
+                        </div>
+                        <span id="todo-count" class="pill">2 tasks</span>
+                    </div>
+
+                    <label class="todo">
+                        <input type="checkbox">
+                        <span>
+                            <b>Upload bank statement</b>
+                            <small>Needed for income verification</small>
+                        </span>
+                    </label>
+
+                    <label class="todo">
+                        <input type="checkbox">
+                        <span>
+                            <b>Review tax summary</b>
+                            <small>Check details before submission</small>
+                        </span>
+                    </label>
+
+                    <p class="note">
+                        <i data-lucide="shield-check"></i>
+                        Demo dashboard — no data is sent to a server.
+                    </p>
+                </article>
+            </div>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <div>
+                        <small class="eyebrow">LATEST UPDATES</small>
+                        <h2>Recent documents</h2>
+                    </div>
+                    <button class="text-btn" data-open="documents">
+                        All documents ↗
+                    </button>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document</th>
+                                <th>Category</th>
+                                <th>Date added</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-table"></tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <!-- DOCUMENTS -->
+        <section class="page-section" id="documents" data-title="My Documents">
+            <div class="page-heading">
+                <div>
+                    <small class="eyebrow">DOCUMENT CENTRE</small>
+                    <h1>My Documents</h1>
+                    <p>Upload and organise files needed for your tax and accounting work.</p>
+                </div>
+            </div>
+
+            <article class="panel upload-panel">
+                <div class="panel-head">
+                    <div>
+                        <small class="eyebrow">ADD A FILE</small>
+                        <h2>Upload a document</h2>
+                        <p>Demo only. Files are not sent to a server.</p>
+                    </div>
+                    <i data-lucide="cloud-upload"></i>
+                </div>
+
+                <form id="upload-form">
+                    <label for="doc-name">Document name</label>
+                    <input id="doc-name" placeholder="e.g. Bank statement - June" required>
+
+                    <label for="doc-category">Category</label>
+                    <select id="doc-category">
+                        <option>Income</option>
+                        <option>Tax</option>
+                        <option>Banking</option>
+                        <option>GST</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label for="doc-file">Choose file (max 10 MB)</label>
+                    <input id="doc-file" type="file"
+                           accept=".pdf,.png,.jpg,.jpeg,.doc,.docx,.xls,.xlsx" required>
+
+                    <button class="button primary" type="submit">Add document</button>
+                    <p id="upload-status" class="form-status" aria-live="polite"></p>
+                </form>
+            </article>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <div>
+                        <small class="eyebrow">YOUR FILES</small>
+                        <h2>Document library</h2>
+                    </div>
+                    <span class="pill" id="library-count">4 documents</span>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document</th>
+                                <th>Category</th>
+                                <th>Date added</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="document-table"></tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <!-- TAX RETURNS -->
+        <section class="page-section" id="filings" data-title="Tax Returns">
+            <div class="page-heading">
+                <div>
+                    <small class="eyebrow">FILING TRACKER</small>
+                    <h1>Tax Returns</h1>
+                    <p>Track current filing progress and view previously filed returns.</p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <article class="panel return-card">
+                    <span class="pill review">In review</span>
+                    <small class="eyebrow">INCOME TAX</small>
+                    <h2>Income Tax Return</h2>
+                    <p>Financial year 2025–26</p>
+                    <div class="progress"><span style="width:72%"></span></div>
+                    <p>72% complete · Due date to be confirmed</p>
+                    <button class="button outline" data-open="documents">View documents</button>
+                </article>
+
+                <article class="panel return-card">
+                    <span class="pill pending">Pending</span>
+                    <small class="eyebrow">GST</small>
+                    <h2>GST Return</h2>
+                    <p>Quarter 1 · FY 2026–27</p>
+                    <div class="progress"><span class="gold-bar" style="width:35%"></span></div>
+                    <p>35% complete · Deadline to be confirmed</p>
+                    <button class="button outline" data-open="documents">View documents</button>
+                </article>
+            </div>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <div>
+                        <small class="eyebrow">COMPLETED</small>
+                        <h2>Past filed returns</h2>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Return</th>
+                                <th>Financial year</th>
+                                <th>Filed on</th>
+                                <th>Reference</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Income Tax Return</td>
+                                <td>2024–25</td>
+                                <td>18 Jul 2025</td>
+                                <td>DEMO-ITR-2401</td>
+                                <td><span class="pill filed">Filed</span></td>
+                            </tr>
+                            <tr>
+                                <td>GST Return</td>
+                                <td>Q4 · 2024–25</td>
+                                <td>20 Apr 2025</td>
+                                <td>DEMO-GST-2402</td>
+                                <td><span class="pill filed">Filed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="disclaimer">
+                    Sample information for design preview. Confirm actual filing
+                    dates and statuses with your tax professional.
+                </p>
+            </article>
+        </section>
+
+        <!-- RECENT ACTIVITY -->
+        <section class="page-section" id="activity" data-title="Recent Activity">
+            <div class="page-heading">
+                <div>
+                    <small class="eyebrow">WORKSPACE HISTORY</small>
+                    <h1>Recent Activity</h1>
+                    <p>Latest changes in your client workspace.</p>
+                </div>
+            </div>
+
+            <article class="panel activity-list">
+                <div>
+                    <i data-lucide="file-up"></i>
+                    <span>
+                        <b>Bank statement uploaded</b>
+                        <small>Banking · Added to document library</small>
+                    </span>
+                    <span class="pill review">Under review</span>
+                </div>
+
+                <div>
+                    <i data-lucide="file-check"></i>
+                    <span>
+                        <b>Previous return marked as filed</b>
+                        <small>Income Tax Return · FY 2024–25</small>
+                    </span>
+                    <span class="pill filed">Complete</span>
+                </div>
+
+                <div>
+                    <i data-lucide="shield-check"></i>
+                    <span>
+                        <b>Client workspace created</b>
+                        <small>Your Ledgerly workspace is ready.</small>
+                    </span>
+                    <span class="pill filed">Complete</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- PROFILE -->
+        <section class="page-section" id="profile" data-title="My Profile">
+            <div class="page-heading">
+                <div>
+                    <small class="eyebrow">PERSONAL DETAILS</small>
+                    <h1>My Profile</h1>
+                    <p>Keep your contact information up to date.</p>
+                </div>
+            </div>
+
+            <article class="panel form-panel">
+                <form id="profile-form">
+                    <div class="profile-fields">
+                        <label>
+                            Full name
+                            <input id="profile-name" value="Srinidhi" required>
+                        </label>
+
+                        <label>
+                            Email address
+                            <input id="profile-email" type="email"
+                                   value="srinidhi@example.com" required>
+                        </label>
+
+                        <label>
+                            Phone number
+                            <input id="profile-phone" type="tel"
+                                   placeholder="Add phone number">
+                        </label>
+
+                        <label>
+                            Client type
+                            <select>
+                                <option>Individual</option>
+                                <option>Business</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <button class="button primary" type="submit">Save changes</button>
+                    <p id="profile-status" class="form-status" aria-live="polite"></p>
+                </form>
+            </article>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="page-section" id="settings" data-title="Settings">
+            <div class="page-heading">
+                <div>
+                    <small class="eyebrow">PREFERENCES</small>
+                    <h1>Settings</h1>
+                    <p>Adjust the appearance and direction of your workspace.</p>
+                </div>
+            </div>
+
+            <article class="panel settings">
+                <div>
+                    <span>
+                        <b>Dark mode</b>
+                        <small>Use a darker dashboard appearance.</small>
+                    </span>
+                    <button id="settings-theme" class="switch">
+                        <i></i><b>Off</b>
+                    </button>
+                </div>
+
+                <div>
+                    <span>
+                        <b>Right-to-left layout</b>
+                        <small>Switch the layout direction for RTL languages.</small>
+                    </span>
+                    <button id="settings-rtl" class="switch">
+                        <i></i><b>Off</b>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <footer class="footer">
+            <span>© 2026 Ledgerly. All rights reserved.</span>
+            <span>Your financial workspace</span>
+        </footer>
+
+    </div>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

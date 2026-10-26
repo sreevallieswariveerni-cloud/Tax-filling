@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Ledgerly</title>
+  <link rel="icon" type="image/png" sizes="184x184" href="images/logo_transparent_image.png">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/404.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="extra-page error-page">
+  <div class="extra-layout">
+    <div class="extra-topbar">
+      <a class="extra-brand" href="index.html" aria-label="Ledgerly home">
+        <img src="images/logo_transparent_image.png" alt="Ledgerly logo">
+ <span><span class="logo-ledger">Ledger</span><span class="logo-ly">ly</span></span>      </a>
+      <div class="extra-tools">
+        <button class="extra-tool theme-toggle" type="button" aria-label="Toggle dark mode">
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="extra-tool rtl-toggle" type="button" aria-label="Toggle RTL">
+          <i data-lucide="arrow-left-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <main class="error-content">
+      <div class="error-icon"><i data-lucide="file-question"></i></div>
+      <p class="error-eyebrow">OOPS! SOMETHING WENT WRONG</p>
+      <h1>Page Not Found</h1>
+      <p class="error-description">
+        The page you're looking for may have been moved, deleted, or never existed.
+      </p>
+      <div class="error-actions">
+        <a class="error-primary" href="index.html">
+          <i data-lucide="house"></i> Back to Home
+        </a>
+        <button class="error-secondary" type="button" onclick="history.back()">Go Back</button>
+      </div>
+      <p class="error-code">ERROR CODE: 404</p>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

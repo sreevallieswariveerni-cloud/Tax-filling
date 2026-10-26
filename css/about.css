@@ -1,0 +1,897 @@
+
+/* ABOUT PAGE — uses existing global root variables */
+
+.about-page {
+    overflow-x: clip;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+    font-family: "Playfair Display", Georgia;
+}
+
+.about-page p {
+    line-height: 1.9;
+}
+
+.about-page .section-padding {
+    padding: 88px 5.1%;
+}
+
+.about-page .about-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-page .about-section-heading {
+    max-width: 720px;
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+.about-page .about-section-heading h2,
+.about-page .about-story-content h2,
+.about-page .about-approach-content h2,
+.about-page .about-cta-content h2 {
+    margin: 0;
+    color: var(--primary);
+    font-size: clamp(34px, 4vw, 53px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-page .about-section-heading h2 em,
+.about-page .about-story-content h2 em,
+.about-page .about-approach-content h2 em,
+.about-page .about-cta-content h2 em {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.about-page .about-section-heading > p {
+    max-width: 590px;
+    margin: 16px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Buttons */
+
+.about-page .about-btn {
+    min-height: 50px;
+    padding: 0 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.about-page .about-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.about-page .about-btn:hover {
+    transform: translateY(-2px);
+}
+
+.about-page .about-btn-primary {
+    color: #fff;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.about-page .about-btn-primary:hover {
+    color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.about-page .about-btn-gold {
+    color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.about-page .about-btn-gold:hover {
+    color: #fff;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* SECTION 1: HERO — fits viewport below header */
+
+.about-page .about-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 520px;
+    height: calc(100vh - 80px);
+    height: calc(100svh - 80px);
+    max-height: 900px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #163d2e;
+}
+
+.about-page .about-hero-image,
+.about-page .about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.about-page .about-hero-image {
+    background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=90");
+    background-position: center;
+    background-size: cover;
+}
+
+.about-page .about-hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(8, 32, 23, .88),
+        rgba(8, 32, 23, .68) 55%,
+        rgba(8, 32, 23, .35)
+    );
+}
+
+.about-page .about-hero-content {
+    width: min(850px, calc(100% - 48px));
+    margin: auto;
+    padding: 35px 0 55px;
+    text-align: center;
+    color: #fff;
+}
+
+.about-page .about-hero .about-eyebrow {
+    color: var(--secondary);
+}
+
+.about-page .about-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(43px, 6vw, 76px);
+    font-weight: 500;
+    line-height: 1.13;
+}
+
+.about-page .about-hero h1 em {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.about-page .about-hero-content > p {
+    max-width: 640px;
+    margin: 23px auto 28px;
+    color: rgba(255, 255, 255, .86);
+    font-size: 15px;
+}
+
+.about-page .about-hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.about-page .about-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-page .about-hero-link svg {
+    width: 17px;
+    color: var(--secondary);
+}
+
+.about-page .about-hero-trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 29px;
+}
+
+.about-page .about-hero-trust span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, .9);
+    font-size: 12px;
+}
+
+.about-page .about-hero-trust svg {
+    width: 17px;
+    height: 17px;
+    color: var(--secondary);
+}
+
+.about-page .about-scroll {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+    transform: translateX(-50%);
+}
+
+.about-page .about-scroll svg {
+    width: 15px;
+    color: var(--secondary);
+}
+
+/* SECTION 2: STORY */
+
+.about-page .about-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    background: var(--bg);
+}
+
+.about-page .about-story-image {
+    position: relative;
+    min-width: 0;
+}
+
+.about-page .about-story-image > img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px 80px 5px 5px;
+}
+
+.about-page .about-image-note {
+    position: absolute;
+    right: -16px;
+    bottom: 24px;
+    width: min(270px, 85%);
+    padding: 18px;
+    background: var(--surface);
+    border-left: 3px solid var(--secondary);
+}
+
+.about-page .about-image-note svg {
+    width: 23px;
+    color: var(--primary);
+}
+
+.about-page .about-image-note p {
+    margin: 8px 0 0;
+    color: var(--text);
+    font-family: "Playfair Display", Georgia;
+    font-size: 17px;
+}
+
+.about-page .about-story-content h2,
+.about-page .about-approach-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-page .about-story-content > p,
+.about-page .about-approach-content > p {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.about-page .about-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 10px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-page .about-text-link svg {
+    width: 16px;
+}
+
+/* SECTION 3: MISSION & VISION */
+
+.about-page .about-mission,
+.about-page .about-why {
+    background: var(--surface);
+}
+
+.about-page .about-purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.about-page .about-purpose-card {
+    position: relative;
+    padding: 32px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    transition: .3s ease;
+}
+
+.about-page .about-purpose-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.about-page .about-purpose-featured {
+    border-top: 3px solid var(--secondary);
+}
+
+.about-page .about-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    color: var(--primary);
+    background: var(--surface-2);
+    border-radius: 12px;
+}
+
+.about-page .about-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.about-page .about-card-number {
+    position: absolute;
+    top: 34px;
+    right: 30px;
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.about-page .about-purpose-card h3,
+.about-page .about-value-card h3,
+.about-page .about-why-grid h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.about-page .about-purpose-card p,
+.about-page .about-value-card p,
+.about-page .about-why-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SECTION 4: VALUES */
+
+.about-page .about-values {
+    background: var(--bg);
+}
+
+.about-page .about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.about-page .about-value-card {
+    padding: 25px 22px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.about-page .about-value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .05);
+}
+
+.about-page .about-value-card > svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.about-page .about-value-card h3 {
+    font-size: 20px;
+}
+
+.about-page .about-value-card p {
+    font-size: 13px;
+}
+
+/* SECTION 5: APPROACH */
+
+.about-page .about-approach {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    background: var(--surface);
+}
+
+.about-page .about-approach-steps {
+    display: grid;
+}
+
+.about-page .about-approach-steps article {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 23px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.about-page .about-approach-steps article:first-child {
+    border-top: 1px solid var(--line);
+}
+
+.about-page .about-approach-steps article > span {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.about-page .about-approach-steps h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.about-page .about-approach-steps p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SECTION 6: WHY LEDGERLY */
+
+.about-page .about-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.about-page .about-why-grid article {
+    padding: 28px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.about-page .about-why-grid article:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.about-page .about-why-grid .about-icon {
+    margin-bottom: 20px;
+}
+
+.about-page .about-why-grid h3 {
+    font-size: 21px;
+}
+
+/* SECTION 7: TESTIMONIALS */
+
+.about-page .about-testimonials {
+    background: var(--bg);
+}
+
+.about-page .about-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.about-page .about-review {
+    display: flex;
+    flex-direction: column;
+    padding: 27px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.about-page .about-review:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.about-page .about-review-featured {
+    border-top: 3px solid var(--secondary);
+}
+
+.about-page .about-stars {
+    color: var(--secondary);
+    letter-spacing: 3px;
+}
+
+.about-page .about-quote {
+    width: 25px;
+    margin: 20px 0 10px;
+    color: var(--secondary);
+}
+
+.about-page .about-review blockquote {
+    flex: 1;
+    margin: 0 0 24px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.about-page .about-review-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 17px;
+    border-top: 1px solid var(--line);
+}
+
+.about-page .about-review-person > span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: #fff;
+    background: var(--primary);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.about-page .about-review-person h3 {
+    margin: 0 0 5px;
+    color: var(--text);
+    font-family: "Lato", Georgia;
+    font-size: 14px;
+}
+
+.about-page .about-review-person p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* SECTION 8: CTA */
+
+.about-page .about-final-cta {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    min-height: 390px;
+    overflow: hidden;
+    text-align: center;
+    background: var(--surface-2);
+}
+
+.about-page .about-cta-decoration {
+    position: absolute;
+    z-index: -1;
+    top: -140px;
+    right: -70px;
+    width: 340px;
+    height: 340px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+}
+
+.about-page .about-cta-content {
+    width: min(700px, calc(100% - 40px));
+    margin: auto;
+    padding: 65px 0;
+}
+
+.about-page .about-cta-content > p {
+    max-width: 540px;
+    margin: 20px auto 26px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Dark mode — reuses existing global variables */
+
+body.dark.about-page .about-mission,
+body.dark.about-page .about-why,
+body.dark.about-page .about-approach,
+body.dark.about-page .about-final-cta {
+    background: var(--surface);
+}
+
+body.dark.about-page .about-purpose-card,
+body.dark.about-page .about-review {
+    background: var(--surface);
+    border-color: var(--line);
+}
+
+body.dark.about-page .about-image-note {
+    background: var(--surface);
+}
+
+body.dark.about-page .about-purpose-card h3,
+body.dark.about-page .about-value-card h3,
+body.dark.about-page .about-why-grid h3,
+body.dark.about-page .about-approach-steps h3,
+body.dark.about-page .about-image-note p {
+    color: var(--text);
+}
+
+/* 1024px */
+
+@media (max-width: 1024px) {
+    .about-page .section-padding {
+        padding: 72px 32px;
+    }
+
+    .about-page .about-story,
+    .about-page .about-approach {
+        gap: 38px;
+    }
+
+    .about-page .about-values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-page .about-why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 768px */
+
+@media (max-width: 768px) {
+    .about-page .section-padding {
+        padding: 60px 24px;
+    }
+
+    .about-page .about-hero {
+        height: calc(100svh - 70px);
+        min-height: 520px;
+    }
+
+    .about-page .about-hero h1 {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+
+    .about-page .about-story,
+    .about-page .about-approach {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .about-page .about-story-image > img {
+        height: 380px;
+    }
+
+    .about-page .about-purpose-grid,
+    .about-page .about-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page .about-review {
+        padding: 24px;
+    }
+}
+
+/* 360px */
+
+@media (max-width: 360px) {
+    .about-page .section-padding {
+        padding: 46px 16px;
+    }
+
+    .about-page .about-hero {
+        height: calc(100svh - 64px);
+        min-height: 490px;
+    }
+
+    .about-page .about-hero-image {
+        background-position: 58% center;
+    }
+
+    .about-page .about-hero-overlay {
+        background: rgba(8, 32, 23, .80);
+    }
+
+    .about-page .about-hero-content {
+        width: calc(100% - 30px);
+        padding: 24px 0 40px;
+    }
+
+    .about-page .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-page .about-hero-content > p {
+        margin: 17px auto 20px;
+        font-size: 13px;
+    }
+
+    .about-page .about-hero-actions {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .about-page .about-hero-actions .about-btn {
+        width: 100%;
+    }
+
+    .about-page .about-hero-trust {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .about-page .about-hero-trust span {
+        font-size: 10px;
+    }
+
+    .about-page .about-section-heading h2,
+    .about-page .about-story-content h2,
+    .about-page .about-approach-content h2,
+    .about-page .about-cta-content h2 {
+        font-size: 32px;
+    }
+
+    .about-page .about-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-page .about-story-image > img {
+        height: 280px;
+        border-top-right-radius: 55px;
+    }
+
+    .about-page .about-image-note {
+        right: 7px;
+        bottom: 10px;
+        padding: 13px;
+    }
+
+    .about-page .about-purpose-grid,
+    .about-page .about-values-grid,
+    .about-page .about-why-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about-page .about-purpose-card,
+    .about-page .about-value-card,
+    .about-page .about-why-grid article {
+        padding: 22px;
+    }
+
+    .about-page .about-card-number {
+        right: 22px;
+    }
+
+    .about-page .about-final-cta {
+        min-height: 340px;
+    }
+
+    .about-page .about-cta-content {
+        width: calc(100% - 32px);
+    }
+}
+
+/* RTL alignment */
+
+html[dir="rtl"] .about-page .about-image-note {
+    right: auto;
+    left: -16px;
+}
+
+html[dir="rtl"] .about-page .about-card-number {
+    right: auto;
+    left: 30px;
+}
+/* ABOUT PAGE — FIX DARK MODE TEXT AND ICONS */
+
+/* All section headings */
+body.dark.about-page .about-section-heading h2,
+body.dark.about-page .about-story-content h2,
+body.dark.about-page .about-approach-content h2,
+body.dark.about-page .about-cta-content h2 {
+    color: #FFFFFF !important;
+}
+
+/* Keep highlighted heading words gold */
+body.dark.about-page .about-section-heading h2 em,
+body.dark.about-page .about-story-content h2 em,
+body.dark.about-page .about-approach-content h2 em,
+body.dark.about-page .about-cta-content h2 em {
+    color: var(--secondary) !important;
+}
+
+/* Story section paragraphs and links */
+body.dark.about-page .about-story-content > p,
+body.dark.about-page .about-approach-content > p,
+body.dark.about-page .about-section-heading > p,
+body.dark.about-page .about-cta-content > p {
+    color: #FFFFFF !important;
+}
+
+body.dark.about-page .about-text-link {
+    color: var(--secondary) !important;
+}
+
+/* Mission and Vision cards */
+body.dark.about-page .about-purpose-card h3,
+body.dark.about-page .about-purpose-card p,
+body.dark.about-page .about-value-card h3,
+body.dark.about-page .about-value-card p,
+body.dark.about-page .about-why-grid h3,
+body.dark.about-page .about-why-grid p {
+    color: #FFFFFF !important;
+}
+
+/* Mission, Vision and Why Ledgerly icons */
+body.dark.about-page .about-icon i,
+body.dark.about-page .about-icon svg,
+body.dark.about-page .about-value-card > i,
+body.dark.about-page .about-value-card > svg {
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+    opacity: 1 !important;
+}
+
+/* Approach steps */
+body.dark.about-page .about-approach-steps h3,
+body.dark.about-page .about-approach-steps p {
+    color: #FFFFFF !important;
+}
+
+/* CTA */
+body.dark.about-page .about-final-cta .about-cta-content h2 {
+    color: #FFFFFF !important;
+}
+
+body.dark.about-page .about-final-cta .about-cta-content h2 em {
+    color: var(--secondary) !important;
+}
+
+/* Image note icon */
+body.dark.about-page .about-image-note i,
+body.dark.about-page .about-image-note svg {
+    color: var(--secondary) !important;
+}
+/* ABOUT PAGE — DARK MODE SECTION TAGLINES */
+body.dark.about-page .about-eyebrow {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}

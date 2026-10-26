@@ -1,0 +1,216 @@
+
+.error-page {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.error-page .extra-layout {
+    min-height: 100vh;
+    padding: 0 var(--gutter);
+}
+
+.error-page .extra-topbar {
+    position: relative;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--line);
+}
+
+.error-page .extra-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    color: var(--primary);
+}
+
+.error-page .extra-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.error-page .extra-brand > span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.error-page .extra-brand > span > span {
+    color: var(--secondary);
+}
+
+.error-page .extra-tools {
+    display: flex;
+    gap: 10px;
+}
+
+.error-page .extra-tool {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--text);
+    background: var(--surface);
+}
+
+.error-page .extra-tool:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.error-page .error-content {
+    min-height: calc(100vh - 86px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 60px;
+    text-align: center;
+}
+
+.error-page .error-icon {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 25px;
+    border-radius: var(--radius);
+    color: var(--primary);
+    background: var(--surface-2);
+}
+
+.error-page .error-icon svg {
+    width: 44px;
+    height: 44px;
+}
+
+.error-page .error-eyebrow {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.error-page h1 {
+    margin: 0;
+    color: var(--primary);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.2;
+}
+
+body.dark.error-page h1 {
+    color: var(--secondary);
+}
+
+.error-page .error-description {
+    max-width: 600px;
+    margin: 16px 0 0;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.error-page .error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.error-page .error-primary,
+.error-page .error-secondary {
+    min-height: var(--btn-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px;
+    border: 1px solid var(--primary);
+    border-radius: var(--btn-radius);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.error-page .error-primary {
+    color: #fff;
+    background: var(--primary);
+}
+
+.error-page .error-primary:hover {
+    color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.error-page .error-secondary {
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--line);
+}
+
+.error-page .error-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.error-page .error-code {
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+body[dir="rtl"] .error-page .error-content {
+    direction: rtl;
+}
+
+@media (max-width: 768px) {
+    .error-page .extra-layout {
+        padding: 0 20px;
+    }
+
+    .error-page .extra-topbar {
+        min-height: 76px;
+    }
+
+    .error-page .error-content {
+        min-height: calc(100vh - 76px);
+    }
+}
+
+@media (max-width: 360px) {
+    .error-page .extra-brand img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .error-page .extra-brand > span {
+        font-size: 19px;
+    }
+
+    .error-page .extra-tools {
+        gap: 5px;
+    }
+
+    .error-page .extra-tool {
+        width: 32px;
+        height: 32px;
+    }
+
+    .error-page .error-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}

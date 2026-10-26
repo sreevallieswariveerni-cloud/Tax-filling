@@ -1,0 +1,803 @@
+
+/* PRICING PAGE — uses the existing site's colors and variables */
+
+.pricing-page {
+    overflow: clip;
+    color: var(--text);
+    background: var(--bg);
+    font-family: "Lato", Georgia, serif;
+}
+
+.pricing-page h1,
+.pricing-page h2,
+.pricing-page h3 {
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.pricing-page .section-shell {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.pricing-page section {
+    box-sizing: border-box;
+}
+
+.pricing-page p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.pricing-eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pricing-section-heading {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.pricing-section-heading h2 {
+    margin: 14px 0;
+    color: var(--primary);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+}
+
+.pricing-section-heading h2 em,
+.pricing-hero h1 span,
+.factors-content h2 em {
+    color: var(--secondary);
+}
+
+.pricing-section-heading > p {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+/* Shared buttons */
+
+.pricing-btn {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 22px;
+    border: 1px solid var(--primary);
+    border-radius: 9px;
+    font-family: "Lato", Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.pricing-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.pricing-btn-primary {
+    color: #ffffff;
+    background: var(--primary);
+}
+
+.pricing-btn-primary:hover {
+    color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.pricing-btn-outline {
+    color: var(--primary);
+    background: transparent;
+}
+
+.pricing-btn-outline:hover {
+    color: #ffffff;
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* 1. Hero */
+
+.pricing-hero {
+    min-height: 540px;
+    padding: 80px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    isolation: isolate;
+    background:
+        linear-gradient(90deg, rgba(10, 37, 29, .88), rgba(10, 37, 29, .48)),
+        url("assets/pricing-hero.jpg") center / cover no-repeat;
+}
+
+.pricing-hero-content {
+    width: min(850px, 100%);
+    text-align: center;
+}
+
+.pricing-hero .pricing-eyebrow {
+    color: var(--secondary);
+}
+
+.pricing-hero h1 {
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 600;
+    line-height: 1.08;
+}
+
+.pricing-hero-content > p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #f4f2ec;
+    font-size: 17px;
+}
+
+.pricing-hero-note {
+    position: absolute;
+    right: 5%;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pricing-hero-note svg {
+    width: 30px;
+    height: 30px;
+    color: var(--secondary);
+}
+
+/* 2. Trust strip */
+
+.pricing-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px 60px;
+    padding-block: 28px;
+    border-bottom: 1px solid var(--line);
+}
+
+.pricing-trust > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.pricing-trust svg {
+    width: 19px;
+    color: var(--primary);
+}
+
+/* 3. Plan cards */
+
+.pricing-plans {
+    padding-block: 90px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.plan-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 27px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(20, 50, 35, .09);
+}
+
+.plan-featured {
+    border: 2px solid var(--secondary);
+    background: var(--surface-2);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 7px 15px;
+    border-radius: 30px;
+    color: var(--primary);
+    background: var(--secondary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.plan-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    border-radius: 13px;
+    color: var(--primary);
+    background: var(--bg);
+}
+
+.plan-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.plan-card h3 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 27px;
+}
+
+.plan-description {
+    min-height: 76px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.plan-price {
+    margin-top: 22px;
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.plan-price-note {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+.plan-divider {
+    height: 1px;
+    margin: 24px 0;
+    background: var(--line);
+}
+
+.plan-card h4 {
+    margin: 0 0 18px;
+    font-size: 14px;
+}
+
+.plan-card ul {
+    display: grid;
+    gap: 15px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.plan-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.plan-card li svg {
+    width: 17px;
+    min-width: 17px;
+    color: var(--primary);
+}
+
+.plan-card .pricing-btn {
+    width: 100%;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+.pricing-disclaimer {
+    margin: 28px 0 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* 4. Process */
+
+.pricing-process {
+    padding-block: 85px;
+    background: var(--surface);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.process-card {
+    position: relative;
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--bg);
+}
+
+.process-card > span {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: var(--secondary);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.process-card > svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.process-card h3 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 21px;
+}
+
+.process-card p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* 5. Pricing factors */
+
+.pricing-factors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding-block: 90px;
+}
+
+.factors-content h2 {
+    margin: 16px 0;
+    color: var(--primary);
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+}
+
+.factors-content > p {
+    max-width: 470px;
+    margin-bottom: 26px;
+}
+
+.factors-list {
+    display: grid;
+    gap: 14px;
+}
+
+.factors-list > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.factors-list svg {
+    width: 23px;
+    min-width: 23px;
+    color: var(--primary);
+}
+
+/* 6. Benefits */
+
+.pricing-benefits {
+    padding-block: 85px;
+    background: var(--surface);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefits-grid article {
+    padding: 26px 22px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--bg);
+}
+
+.benefits-grid article > svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 18px;
+    color: var(--primary);
+}
+
+.benefits-grid h3 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 19px;
+}
+
+.benefits-grid p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+/* 7. Testimonials */
+
+.pricing-testimonials {
+    padding-block: 90px;
+}
+
+.testimonial-note {
+    max-width: 720px;
+    margin-inline: auto;
+    padding: 38px;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--secondary);
+    border-radius: 15px;
+    text-align: center;
+    background: var(--surface);
+}
+
+.testimonial-note > svg {
+    width: 34px;
+    height: 34px;
+    color: var(--secondary);
+}
+
+.testimonial-note p {
+    margin: 16px auto 24px;
+}
+
+/* 8. Final CTA */
+
+.pricing-final-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 80px;
+    padding: 50px;
+    border-radius: 18px;
+    color: #ffffff;
+    background: var(--primary);
+}
+
+.pricing-final-cta .pricing-eyebrow {
+    color: var(--secondary);
+}
+
+.pricing-final-cta h2 {
+    margin: 12px 0;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+}
+
+.pricing-final-cta p {
+    margin-bottom: 0;
+    color: #e4ece6;
+}
+
+.pricing-btn-light {
+    flex-shrink: 0;
+    color: var(--primary);
+    border-color: var(--secondary);
+    background: var(--secondary);
+}
+
+.pricing-btn-light:hover {
+    color: #ffffff;
+    background: transparent;
+    border-color: #ffffff;
+}
+
+/* DARK MODE */
+
+body.dark .pricing-page {
+    color: var(--text);
+    background: var(--bg);
+}
+
+body.dark .plan-card,
+body.dark .process-card,
+body.dark .benefits-grid article,
+body.dark .testimonial-note,
+body.dark .factors-list > div {
+    background: var(--surface);
+}
+
+body.dark .plan-featured {
+    background: var(--surface-2);
+}
+
+body.dark .pricing-btn-outline {
+    color: var(--text);
+    border-color: var(--secondary);
+}
+
+body.dark .pricing-btn-outline:hover {
+    color: var(--primary);
+    background: var(--secondary);
+}
+
+body.dark .pricing-process,
+body.dark .pricing-benefits {
+    background: var(--surface);
+}
+
+/* TABLET — 768px */
+
+@media (max-width: 768px) {
+    .pricing-page .section-shell {
+        width: calc(100% - 40px);
+    }
+
+    .pricing-hero {
+        min-height: 500px;
+        padding: 70px 24px;
+    }
+
+    .pricing-hero-note {
+        right: 24px;
+        bottom: 18px;
+    }
+
+    .pricing-trust {
+        gap: 18px 28px;
+    }
+
+    .pricing-plans,
+    .pricing-testimonials {
+        padding-block: 65px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .plan-featured {
+        grid-column: auto;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-factors {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-block: 65px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-final-cta {
+        padding: 35px;
+    }
+}
+
+/* MOBILE — 360px */
+
+@media (max-width: 360px) {
+    .pricing-page .section-shell {
+        width: calc(100% - 32px);
+    }
+
+    .pricing-hero {
+        min-height: 460px;
+        padding: 55px 16px 90px;
+    }
+
+    .pricing-hero h1 {
+        font-size: 38px;
+    }
+
+    .pricing-hero-content > p {
+        font-size: 14px;
+    }
+
+    .pricing-hero-note {
+        right: 16px;
+        bottom: 14px;
+    }
+
+    .pricing-trust {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        padding-block: 22px;
+    }
+
+    .pricing-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .plan-card {
+        padding: 26px 21px;
+    }
+
+    .plan-description {
+        min-height: 0;
+    }
+
+    .pricing-final-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        padding: 28px 22px;
+        margin-bottom: 45px;
+    }
+
+    .pricing-final-cta .pricing-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .testimonial-note {
+        padding: 25px 18px;
+    }
+
+    .pricing-btn {
+        padding-inline: 16px;
+    }
+}
+
+/* PRICING PAGE — DARK MODE VISIBILITY FIX */
+
+body.dark .pricing-section-heading h2,
+body.dark .pricing-section-heading h2 em,
+body.dark .pricing-section-heading p,
+body.dark .pricing-eyebrow {
+    color: #FFFFFF;
+}
+
+/* Pricing cards headings and descriptions */
+body.dark .plan-card h3,
+body.dark .plan-card h4,
+body.dark .plan-card .plan-price,
+body.dark .plan-card .plan-description,
+body.dark .plan-card .plan-price-note,
+body.dark .plan-card li,
+body.dark .pricing-disclaimer {
+    color: #FFFFFF;
+}
+
+/* Plan card icons */
+body.dark .plan-icon {
+    background: #24342B;
+    color: #E8B16A;
+}
+
+body.dark .plan-icon svg,
+body.dark .plan-card li svg {
+    color: #E8B16A;
+    stroke: #E8B16A;
+}
+
+/* Trust strip icons and text */
+body.dark .pricing-trust > div {
+    color: #FFFFFF;
+}
+
+body.dark .pricing-trust svg {
+    color: #E8B16A;
+    stroke: #E8B16A;
+}
+
+/* Process section icons and headings */
+body.dark .process-grid h3,
+body.dark .process-grid p,
+body.dark .process-grid svg {
+    color: #FFFFFF;
+}
+
+body.dark .process-grid svg {
+    stroke: #E8B16A;
+}
+
+/* Quote requirements section */
+body.dark .pricing-factors h2,
+body.dark .pricing-factors h3,
+body.dark .pricing-factors p,
+body.dark .pricing-factors li {
+    color: #FFFFFF;
+}
+
+body.dark .pricing-factors svg {
+    color: #E8B16A;
+    stroke: #E8B16A;
+}
+
+/* PRICING PAGE — DARK MODE VISIBILITY FIX */
+
+body.dark .pricing-page .pricing-eyebrow,
+body.dark .pricing-page .pricing-section-heading h2,
+body.dark .pricing-page .pricing-section-heading h2 em,
+body.dark .pricing-page .pricing-section-heading p,
+body.dark .pricing-page .pricing-factors h2,
+body.dark .pricing-page .pricing-factors h2 em,
+body.dark .pricing-page .pricing-factors p,
+body.dark .pricing-page .pricing-factors .factors-list span,
+body.dark .pricing-page .plan-card h3,
+body.dark .pricing-page .plan-card h4,
+body.dark .pricing-page .plan-card p,
+body.dark .pricing-page .plan-card li,
+body.dark .pricing-page .process-card h3,
+body.dark .pricing-page .process-card p,
+body.dark .pricing-page .benefits-grid h3,
+body.dark .pricing-page .benefits-grid p,
+body.dark .pricing-page .testimonial-note p {
+    color: #FFFFFF;
+}
+
+/* All pricing section icons */
+body.dark .pricing-page svg,
+body.dark .pricing-page i[data-lucide] {
+    color: var(--secondary);
+    stroke: var(--secondary);
+}
+
+/* Plan icon background */
+body.dark .pricing-page .plan-icon {
+    background: var(--surface-2);
+    color: var(--secondary);
+}
+
+/* Keep the final CTA text white */
+body.dark .pricing-page .pricing-final-cta h2,
+body.dark .pricing-page .pricing-final-cta p {
+    color: #FFFFFF;
+}
+
+/* Keep highlighted text readable */
+body.dark .pricing-page .pricing-section-heading h2 em,
+body.dark .pricing-page .pricing-factors h2 em {
+    color: var(--secondary);
+}
+
+/* Benefits section cards */
+body.dark .pricing-page .benefits-grid article {
+    background: var(--surface);
+    border-color: var(--line);
+}

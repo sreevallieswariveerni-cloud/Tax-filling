@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Ledgerly</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="images/logo_transparent_image.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+        <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"> -->
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <!-- <script src="js/main.js" defer></script> -->
+</head>
+<body class="auth-page login-page">
+
+    <main class="auth-layout">
+        <div class="auth-decoration auth-decoration-one"></div>
+        <div class="auth-decoration auth-decoration-two"></div>
+
+        <div class="auth-tools">
+    <button type="button" class="auth-tool-button theme-toggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon"></i>
+    </button>
+
+    <button type="button" class="auth-tool-button rtl-toggle" aria-label="Toggle text direction">
+         <i data-lucide="arrow-left-right"></i>
+    </button>
+</div>
+
+        <section class="auth-card login-card">
+            <a href="index.html" class="auth-brand">
+                <img src="images/logo_transparent_image.png" alt="Ledgerly logo">
+                <span class="auth-brand-name">Ledger<span>ly</span></span>
+            </a>
+
+            <header class="auth-heading">
+                <p class="auth-eyebrow">LEDGERLY CLIENT PORTAL</p>
+                <h1>Welcome <em>Back</em></h1>
+                <p>Sign in to manage your documents and tax filings.</p>
+            </header>
+
+            <form id="login-form">
+                <label class="auth-field">
+                    <span>Email Address</span>
+                    <span class="auth-input-wrap">
+                        <i data-lucide="mail"></i>
+                        <input type="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+                    </span>
+                </label>
+
+                <label class="auth-field">
+                    <span>Password</span>
+                    <span class="auth-input-wrap">
+                        <i data-lucide="lock-keyhole"></i>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        <button type="button" class="auth-password-toggle" data-password-target="login-password" aria-label="Show password">
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </span>
+                </label>
+
+                <div class="auth-form-options">
+                    <label class="auth-checkbox">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="forgot-password.html" class="auth-text-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    Login <i data-lucide="arrow-right"></i>
+                </button>
+
+                <p class="auth-message" id="login-message" aria-live="polite"></p>
+            </form>
+
+            <p class="auth-switch">
+                New to Ledgerly? <a href="signup.html">Create account</a>
+            </p>
+
+            <p class="auth-legal">© 2026 Ledgerly. All rights reserved.</p>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

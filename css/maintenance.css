@@ -1,0 +1,468 @@
+
+/* ========================================
+   LEDGERLY - MAINTENANCE PAGE
+   Uses variables from css/style.css
+======================================== */
+
+.maintenance-page {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "DM Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.maintenance-page .maintenance-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--gutter);
+}
+
+/* Top bar */
+
+.maintenance-page .maintenance-topbar {
+    position: relative;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+}
+
+.maintenance-page .maintenance-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.maintenance-page .maintenance-brand img {
+    width: 42px;
+    height: 42px;
+    max-width: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.maintenance-page .maintenance-brand-name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.maintenance-page .logo-ledger {
+    color: var(--text);
+}
+
+.maintenance-page .logo-ly {
+    color: var(--secondary);
+}
+
+/* Theme and RTL controls */
+
+.maintenance-page .maintenance-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.maintenance-page .maintenance-tool {
+    width: 42px;
+    height: 42px;
+    display: inline-grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.maintenance-page .maintenance-tool i,
+.maintenance-page .maintenance-tool svg {
+    width: 19px;
+    height: 19px;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+.maintenance-page .maintenance-tool:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--primary);
+}
+
+/* Main section */
+
+.maintenance-page .maintenance-content {
+    flex: 1;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+/* Illustration */
+
+.maintenance-page .maintenance-art {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 28px;
+}
+
+.maintenance-page .maintenance-circle {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-2);
+    color: var(--primary);
+}
+
+.maintenance-page .maintenance-circle i,
+.maintenance-page .maintenance-circle svg {
+    width: 45px;
+    height: 45px;
+    stroke: currentColor;
+    stroke-width: 1.6;
+}
+
+.maintenance-page .maintenance-spark {
+    position: absolute;
+    color: var(--secondary);
+    line-height: 1;
+}
+
+.maintenance-page .maintenance-spark-one {
+    top: -9px;
+    right: -9px;
+    font-size: 27px;
+}
+
+.maintenance-page .maintenance-spark-two {
+    bottom: -7px;
+    left: -10px;
+    font-size: 24px;
+}
+
+/* Eyebrow and heading */
+
+.maintenance-page .maintenance-eyebrow {
+    margin: 0 0 15px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.maintenance-page .maintenance-content h1 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--primary);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.maintenance-page .maintenance-content h1 span {
+    display: block;
+    color: var(--secondary);
+}
+
+/* Description */
+
+.maintenance-page .maintenance-description {
+    max-width: 650px;
+    margin: 22px auto 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Status */
+
+.maintenance-page .maintenance-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 13px;
+}
+
+.maintenance-page .maintenance-status-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--secondary);
+}
+
+/* Back to home button */
+
+.maintenance-page .maintenance-home {
+    min-height: var(--btn-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 0 23px;
+    border: 1px solid var(--primary);
+    border-radius: var(--btn-radius);
+    background: var(--primary);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.maintenance-page .maintenance-home i,
+.maintenance-page .maintenance-home svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+}
+
+.maintenance-page .maintenance-home:hover {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Footer */
+
+.maintenance-page .maintenance-footer {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Dark mode */
+
+body.dark.maintenance-page {
+    background: var(--bg);
+    color: var(--text);
+}
+
+body.dark.maintenance-page .maintenance-topbar {
+    background: var(--bg);
+    border-color: var(--line);
+}
+
+body.dark.maintenance-page .maintenance-brand-name .logo-ledger {
+    color: #FFFFFF;
+}
+
+body.dark.maintenance-page .maintenance-eyebrow {
+    color: var(--secondary);
+}
+
+body.dark.maintenance-page .maintenance-content h1 {
+    color: #FFFFFF;
+}
+
+body.dark.maintenance-page .maintenance-content h1 span {
+    color: var(--secondary);
+}
+
+body.dark.maintenance-page .maintenance-description,
+body.dark.maintenance-page .maintenance-footer {
+    color: var(--muted);
+}
+
+body.dark.maintenance-page .maintenance-circle {
+    background: var(--surface-2);
+    color: var(--secondary);
+}
+
+body.dark.maintenance-page .maintenance-tool {
+    background: var(--surface);
+    border-color: var(--line);
+    color: var(--text);
+}
+
+body.dark.maintenance-page .maintenance-status {
+    background: var(--surface);
+    border-color: var(--line);
+    color: #FFFFFF;
+}
+
+/* RTL support */
+
+body[dir="rtl"] .maintenance-page .maintenance-content {
+    direction: rtl;
+}
+
+body[dir="rtl"] .maintenance-page .maintenance-tools {
+    direction: ltr;
+}
+
+body[dir="rtl"] .maintenance-page .maintenance-home {
+    flex-direction: row-reverse;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .maintenance-page .maintenance-layout {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .maintenance-page .maintenance-topbar {
+        min-height: 76px;
+    }
+
+    .maintenance-page .maintenance-content {
+        min-height: calc(100vh - 140px);
+        padding: 45px 0;
+    }
+
+    .maintenance-page .maintenance-art {
+        width: 105px;
+        height: 105px;
+        margin-bottom: 25px;
+    }
+
+    .maintenance-page .maintenance-content h1 {
+        font-size: clamp(36px, 7vw, 52px);
+    }
+
+    .maintenance-page .maintenance-description {
+        max-width: 540px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 360px) {
+    .maintenance-page .maintenance-layout {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .maintenance-page .maintenance-topbar {
+        min-height: 68px;
+    }
+
+    .maintenance-page .maintenance-brand {
+        gap: 6px;
+    }
+
+    .maintenance-page .maintenance-brand img {
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+    }
+
+    .maintenance-page .maintenance-brand-name {
+        font-size: 19px;
+    }
+
+    .maintenance-page .maintenance-tools {
+        gap: 5px;
+    }
+
+    .maintenance-page .maintenance-tool {
+        width: 32px;
+        height: 32px;
+    }
+
+    .maintenance-page .maintenance-tool i,
+    .maintenance-page .maintenance-tool svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .maintenance-page .maintenance-content {
+        min-height: calc(100vh - 125px);
+        padding: 40px 0;
+    }
+
+    .maintenance-page .maintenance-art {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 22px;
+    }
+
+    .maintenance-page .maintenance-circle i,
+    .maintenance-page .maintenance-circle svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .maintenance-page .maintenance-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .maintenance-page .maintenance-content h1 {
+        font-size: 35px;
+        letter-spacing: -0.7px;
+    }
+
+    .maintenance-page .maintenance-description {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .maintenance-page .maintenance-status {
+        gap: 7px;
+        margin-top: 20px;
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .maintenance-page .maintenance-home {
+        min-height: 44px;
+        margin-top: 22px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+    .maintenance-page .maintenance-footer {
+        gap: 5px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Under Maintenance | Ledgerly</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="images/logo_transparent_image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/maintenance.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="extra-page maintenance-page">
+
+    <div class="maintenance-layout">
+
+        <!-- Top bar -->
+        <header class="maintenance-topbar">
+
+            <a class="maintenance-brand" href="index.html" aria-label="Ledgerly home">
+                <img src="images/logo_transparent_image.png" alt="Ledgerly logo">
+                <span class="maintenance-brand-name">
+                    <span class="logo-ledger">Ledger</span><span class="logo-ly">ly</span>
+                </span>
+            </a>
+
+            <div class="maintenance-tools">
+                <button class="maintenance-tool theme-toggle"
+                        type="button"
+                        aria-label="Toggle dark mode"
+                        title="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button class="maintenance-tool rtl-toggle"
+                        type="button"
+                        aria-label="Toggle text direction"
+                        title="Toggle RTL">
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+            </div>
+
+        </header>
+
+        <!-- Main content -->
+        <main class="maintenance-content">
+
+            <div class="maintenance-art" aria-hidden="true">
+                <div class="maintenance-circle">
+                    <i data-lucide="settings"></i>
+                </div>
+
+                <span class="maintenance-spark maintenance-spark-one">✦</span>
+                <span class="maintenance-spark maintenance-spark-two">✧</span>
+            </div>
+
+            <p class="maintenance-eyebrow">WE'LL BE RIGHT BACK</p>
+
+            <h1>
+                Something Great
+                <span>Is in the Works</span>
+            </h1>
+
+            <p class="maintenance-description">
+                We're making a few improvements to give you a better
+                Ledgerly experience. Thank you for your patience while
+                we get things ready.
+            </p>
+
+            <div class="maintenance-status">
+                <span class="maintenance-status-dot"></span>
+                <span>We are working on improvements</span>
+            </div>
+
+            <a class="maintenance-home" href="index.html">
+                <i data-lucide="house"></i>
+                <span>Back to Home</span>
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </main>
+
+        <footer class="maintenance-footer">
+            <span>© 2026 Ledgerly.</span>
+            <span>Clear guidance. Thoughtful support.</span>
+        </footer>
+
+    </div>
+
+    <!-- Reuse existing site functionality -->
+    <script src="js/main.js"></script>
+
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>

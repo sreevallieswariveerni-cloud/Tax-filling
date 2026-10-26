@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing Plans | Ledgerly</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="images/logo_transparent_image.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"> -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+</head>
+
+<body>
+
+<header class="site-header section-shell">
+
+
+<a href="index.html" class="brand-logo" aria-label="Ledgerly home">
+  <img src="images/logo_transparent_image.png" alt="" class="brand-logo-icon">
+  <span><span class="logo-ledger">Ledger</span><span class="logo-ly">ly</span></span>
+</a>
+
+
+    <button class="menu-toggle icon-btn"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <nav class="main-nav">
+
+        <div class="nav-dropdown">
+            <button class="nav-link dropdown-trigger"
+                    aria-expanded="false">
+                Home <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+                <a href="index.html">Home 1 <span>Classic</span></a>
+                <a href="home-2.html">Home 2 <span>Premium</span></a>
+            </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link active">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i>
+        </button>
+
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+            <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <a href="login.html" class="btn btn-primary login-btn">
+            <i data-lucide="user-round"></i>
+            <span>Login</span>
+        </a>
+
+    </div>
+</header>
+
+    <main class="pricing-page">
+
+        <!-- 1. HERO -->
+        <section class="pricing-hero">
+            <div class="pricing-hero-content" data-aos="fade-up">
+                <span class="pricing-eyebrow">SIMPLE & TRANSPARENT</span>
+
+                <h1>
+                    Thoughtful Services.<br>
+                    <span>Clear Pricing.</span>
+                </h1>
+
+                <p>
+                    Choose the right support for your financial journey.
+                    Straightforward plans, personal guidance and no unnecessary complexity.
+                </p>
+
+                <a href="#plans" class="pricing-btn pricing-btn-primary">
+                    Explore Our Plans
+                    <i data-lucide="arrow-down-right"></i>
+                </a>
+            </div>
+
+            <div class="pricing-hero-note" data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="shield-check"></i>
+                <span>
+                    Transparent pricing<br>
+                    Personalised support
+                </span>
+            </div>
+        </section>
+
+        <!-- 2. TRUST STRIP -->
+        <section class="pricing-trust section-shell">
+
+            <div data-aos="fade-up" data-aos-delay="100">
+                <i data-lucide="check-circle"></i>
+                Clear service details
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+                <i data-lucide="handshake"></i>
+                Personal guidance
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300">
+                <i data-lucide="lock-keyhole"></i>
+                Confidential support
+            </div>
+
+        </section>
+
+        <!-- 3. PRICING PLANS -->
+        <section class="pricing-plans section-shell" id="plans">
+
+            <div class="pricing-section-heading" data-aos="fade-up">
+                <span class="pricing-eyebrow">OUR PLANS</span>
+
+                <h2>Find the Right Fit <em>for You</em></h2>
+
+                <p>
+                    Choose a starting point based on the support you need.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <article class="plan-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+
+                    <h3>Essential</h3>
+
+                    <p class="plan-description">
+                        For individuals who need help with everyday tax documentation.
+                    </p>
+
+                    <div class="plan-price">Custom Quote</div>
+                    <p class="plan-price-note">Based on your requirements</p>
+
+                    <div class="plan-divider"></div>
+
+                    <h4>What's included</h4>
+
+                    <ul>
+                        <li><i data-lucide="check"></i> Initial requirement review</li>
+                        <li><i data-lucide="check"></i> Document checklist</li>
+                        <li><i data-lucide="check"></i> Basic filing guidance</li>
+                        <li><i data-lucide="check"></i> Email support</li>
+                    </ul>
+
+                    <a href="contact.html" class="pricing-btn pricing-btn-outline">
+                        Enquire Now
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article class="plan-card plan-featured" data-aos="fade-up" data-aos-delay="200">
+                    <span class="plan-badge">POPULAR CHOICE</span>
+
+                    <div class="plan-icon">
+                        <i data-lucide="briefcase-business"></i>
+                    </div>
+
+                    <h3>Professional</h3>
+
+                    <p class="plan-description">
+                        For individuals and small businesses needing regular support.
+                    </p>
+
+                    <div class="plan-price">Custom Quote</div>
+                    <p class="plan-price-note">Based on services selected</p>
+
+                    <div class="plan-divider"></div>
+
+                    <h4>Everything in Essential, plus</h4>
+
+                    <ul>
+                        <li><i data-lucide="check"></i> Accounting assistance</li>
+                        <li><i data-lucide="check"></i> GST return support</li>
+                        <li><i data-lucide="check"></i> Organised record guidance</li>
+                        <li><i data-lucide="check"></i> Priority communication</li>
+                    </ul>
+
+                    <a href="contact.html" class="pricing-btn pricing-btn-primary">
+                        Enquire Now
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article class="plan-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plan-icon">
+                        <i data-lucide="building-2"></i>
+                    </div>
+
+                    <h3>Business Plus</h3>
+
+                    <p class="plan-description">
+                        For businesses that need broader, ongoing financial assistance.
+                    </p>
+
+                    <div class="plan-price">Tailored Quote</div>
+                    <p class="plan-price-note">Designed around your business</p>
+
+                    <div class="plan-divider"></div>
+
+                    <h4>What's included</h4>
+
+                    <ul>
+                        <li><i data-lucide="check"></i> Business requirement review</li>
+                        <li><i data-lucide="check"></i> Accounting support</li>
+                        <li><i data-lucide="check"></i> Tax and GST assistance</li>
+                        <li><i data-lucide="check"></i> Dedicated communication</li>
+                    </ul>
+
+                    <a href="contact.html" class="pricing-btn pricing-btn-outline">
+                        Talk to Our Team
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+            <p class="pricing-disclaimer" data-aos="fade-up">
+                Final pricing depends on the service, documents and scope of work.
+                Request a quote for an accurate estimate.
+            </p>
+
+        </section>
+
+        <!-- 4. HOW IT WORKS -->
+        <section class="pricing-process">
+
+            <div class="section-shell">
+
+                <div class="pricing-section-heading" data-aos="fade-up">
+                    <span class="pricing-eyebrow">A SIMPLE PROCESS</span>
+
+                    <h2>From Enquiry to <em>Clarity</em></h2>
+
+                    <p>
+                        Getting started should feel simple and comfortable.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card" data-aos="fade-up" data-aos-delay="100">
+                        <span>01</span>
+                        <i data-lucide="messages-square"></i>
+
+                        <h3>Tell Us Your Needs</h3>
+
+                        <p>
+                            Share the service you need and your current requirements.
+                        </p>
+                    </article>
+
+                    <article class="process-card" data-aos="fade-up" data-aos-delay="200">
+                        <span>02</span>
+                        <i data-lucide="clipboard-check"></i>
+
+                        <h3>Get a Clear Quote</h3>
+
+                        <p>
+                            We review your requirements and explain the proposed scope.
+                        </p>
+                    </article>
+
+                    <article class="process-card" data-aos="fade-up" data-aos-delay="300">
+                        <span>03</span>
+                        <i data-lucide="check-circle-2"></i>
+
+                        <h3>Move Forward</h3>
+
+                        <p>
+                            Once agreed, we guide you through the next steps.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 5. WHAT AFFECTS PRICING -->
+        <section class="pricing-factors section-shell">
+
+            <div class="factors-content" data-aos="fade-right">
+                <span class="pricing-eyebrow">MADE FOR YOUR NEEDS</span>
+
+                <h2>
+                    Your Requirements.<br>
+                    <em>Your Quote.</em>
+                </h2>
+
+                <p>
+                    Every financial situation is different. We consider your
+                    requirements before suggesting the services that suit you.
+                </p>
+
+                <a href="contact.html" class="pricing-btn pricing-btn-primary">
+                    Discuss Your Requirements
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="factors-list" data-aos="fade-left">
+
+                <div>
+                    <i data-lucide="file-check-2"></i>
+                    <span>Type of service required</span>
+                </div>
+
+                <div>
+                    <i data-lucide="files"></i>
+                    <span>Number and complexity of documents</span>
+                </div>
+
+                <div>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Frequency of support</span>
+                </div>
+
+                <div>
+                    <i data-lucide="building-2"></i>
+                    <span>Individual or business requirements</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 6. WHY LEDGERLY -->
+        <section class="pricing-benefits">
+
+            <div class="section-shell">
+
+                <div class="pricing-section-heading" data-aos="fade-up">
+                    <span class="pricing-eyebrow">THE LEDGERLY DIFFERENCE</span>
+
+                    <h2>More Than a <em>Price</em></h2>
+
+                    <p>
+                        Support that values clarity, care and your time.
+                    </p>
+                </div>
+
+                <div class="benefits-grid">
+
+                    <article data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="eye"></i>
+
+                        <h3>Clear Communication</h3>
+
+                        <p>
+                            Understand the service, requirements and next steps.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="heart-handshake"></i>
+
+                        <h3>Personal Attention</h3>
+
+                        <p>
+                            Guidance based on your needs rather than a one-size-fits-all approach.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="shield-check"></i>
+
+                        <h3>Careful Handling</h3>
+
+                        <p>
+                            Thoughtful attention to your documents and information.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="400">
+                        <i data-lucide="message-circle"></i>
+
+                        <h3>Ongoing Support</h3>
+
+                        <p>
+                            A clear way to ask questions and get assistance.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 7. TESTIMONIALS -->
+        <section class="pricing-testimonials section-shell">
+
+            <div class="pricing-section-heading" data-aos="fade-up">
+                <span class="pricing-eyebrow">CLIENT EXPERIENCES</span>
+
+                <h2>Service That Starts with <em>Trust</em></h2>
+
+                <p>
+                    We believe good service begins with listening and clear communication.
+                </p>
+            </div>
+
+            <div class="testimonial-note" data-aos="zoom-in">
+                <i data-lucide="quote"></i>
+
+                <p>
+                    Have worked with Ledgerly before? Your feedback helps us
+                    improve our service and support.
+                </p>
+
+                <a href="contact.html" class="pricing-btn pricing-btn-outline">
+                    Share Your Experience
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- 8. FINAL CTA -->
+        <section class="pricing-final-cta section-shell" data-aos="fade-up">
+
+            <div>
+                <span class="pricing-eyebrow">LET'S GET STARTED</span>
+
+                <h2>
+                    Not Sure Which Plan<br>
+                    Is Right for You?
+                </h2>
+
+                <p>
+                    Tell us what you need. We'll help you explore the next step.
+                </p>
+            </div>
+
+            <a href="contact.html" class="pricing-btn pricing-btn-light">
+                Talk to Our Team
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+<footer class="site-footer">
+
+    <div class="footer-main section-shell">
+
+        <div class="footer-about">
+
+<a href="index.html" class="brand-logo" aria-label="Ledgerly home">
+  <img src="images/logo_transparent_image.png" alt="" class="brand-logo-icon">
+  <span><span class="logo-ledger">Ledger</span><span class="logo-ly">ly</span></span>
+</a>
+
+
+
+            <p>
+                Clear-minded tax filing and accounting support
+                for individuals and businesses.
+            </p>
+
+            <div class="social-links">
+                <div class="social-links">
+    <a href="#" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="#" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="#" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+</div>
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Explore</h3>
+            <a href="index.html">Home 1</a>
+            <a href="home-2.html">Home 2 · Premium</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing Plans</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Services</h3>
+            <a href="services.html#income-tax">Income Tax Filing</a>
+            <a href="services.html#accounting">Accounting</a>
+            <a href="services.html#gst">GST Returns</a>
+            <a href="contact.html">Document Support</a>
+        </div>
+                        
+<div class="footer-column">
+    <h3>Additional Pages</h3>
+    <a href="404.html">404 Error Page</a>
+    <a href="maintenance.html">Maintenance</a>
+</div>
+
+
+
+        <div class="footer-column footer-contact">
+            <h3>Contact & Support</h3>
+
+            <p>Have a question? We're happy to help.</p>
+
+            <a href="mailto:hello@ledgerly.example">
+                <i data-lucide="mail"></i>
+                hello@ledgerly.example
+            </a>
+
+            <a href="contact.html">
+                <i data-lucide="message-circle"></i>
+                Contact our team
+            </a>
+
+            <span class="hours">
+                <i data-lucide="clock-3"></i>
+                Mon–Fri, 9 AM–6 PM
+            </span>
+        </div>
+
+    </div>
+    
+
+    <div class="footer-bottom section-shell">
+
+        <span>© 2026 Ledgerly. All rights reserved.</span>
+
+        <div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+</footer>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80,
+            easing: "ease-out-cubic"
+        });
+
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

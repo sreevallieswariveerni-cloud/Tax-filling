@@ -1,0 +1,1245 @@
+
+/* ===================================
+   HOME 2 — PREMIUM PAGE
+   Uses existing global CSS variables
+=================================== */
+
+.home-two {
+  overflow-x: clip;
+}
+
+.home-two *,
+.home-two *::before,
+.home-two *::after {
+  box-sizing: border-box;
+}
+
+.home-two h1,
+.home-two h2,
+.home-two h3 {
+  font-family: "Playfair Display", Georgia;
+}
+
+.home-two img {
+  display: block;
+  max-width: 100%;
+}
+
+.home-two .section-padding {
+  padding: 88px 5.1%;
+}
+
+.home-two .eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.home-two .section-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.home-two .section-heading h2,
+.home-two .trust-intro h2,
+.home-two .about-content h2,
+.home-two .benefits-copy h2,
+.home-two .premium-cta-content h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.home-two .section-heading h2 em,
+.home-two .trust-intro h2 em,
+.home-two .about-content h2 em,
+.home-two .benefits-copy h2 em,
+.home-two .premium-cta-content h2 em {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.home-two .section-heading > p {
+  max-width: 600px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* BUTTONS — same sizing across sections */
+
+.home-two .btn {
+  min-height: 50px;
+  padding: 0 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease,
+              border-color .25s ease, transform .25s ease;
+}
+
+.home-two .btn:hover {
+  transform: translateY(-2px);
+}
+
+.home-two .btn-primary {
+  color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.home-two .btn-primary:hover {
+  color: var(--primary);
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.home-two .btn-gold {
+  color: var(--primary);
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.home-two .btn-gold:hover {
+  color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* SECTION 1 — FULL-SCREEN HERO */
+
+.home-two .premium-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: calc(100vh - 78px);
+  height: calc(100svh - 78px);
+  min-height: 500px;
+  max-height: 900px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #173c2d;
+}
+
+.home-two .hero-background,
+.home-two .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.home-two .hero-background {
+  background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=90");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-two .hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 34, 24, .86),
+    rgba(9, 34, 24, .63) 55%,
+    rgba(9, 34, 24, .30)
+  );
+}
+
+.home-two .premium-hero-content {
+  width: min(900px, calc(100% - 48px));
+  margin: auto;
+  padding: 30px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.home-two .hero-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--secondary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.home-two .eyebrow-line {
+  width: 30px;
+  height: 1px;
+  background: var(--secondary);
+}
+
+.home-two .premium-hero h1 {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: clamp(42px, 6.2vw, 78px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.home-two .premium-hero h1 em {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.home-two .premium-hero-content > p {
+  max-width: 620px;
+  margin: 24px auto 28px;
+  color: rgba(255, 255, 255, .88);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.home-two .hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.home-two .hero-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-two .hero-secondary-link svg {
+  width: 17px;
+  color: var(--secondary);
+}
+
+.home-two .hero-assurance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 32px;
+}
+
+.home-two .hero-assurance span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, .88);
+  font-size: 12px;
+}
+
+.home-two .hero-assurance svg {
+  width: 16px;
+  height: 16px;
+  color: var(--secondary);
+}
+
+.home-two .hero-scroll-cue {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.home-two .hero-scroll-cue svg {
+  width: 15px;
+  color: var(--secondary);
+}
+
+/* SECTION 2 — TRUST */
+
+.home-two .premium-trust {
+  display: grid;
+  grid-template-columns: .9fr 1.5fr;
+  align-items: center;
+  gap: 50px;
+  background: var(--surface);
+}
+
+.home-two .trust-intro h2 {
+  max-width: 420px;
+  font-size: clamp(30px, 3.2vw, 43px);
+}
+
+.home-two .trust-intro > p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.home-two .trust-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.home-two .trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.home-two .trust-item > svg {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.home-two .trust-item h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-family: "Lato", Georgia;
+  font-size: 14px;
+}
+
+.home-two .trust-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* SECTION 3 — SERVICES */
+
+.home-two .premium-services {
+  background: var(--bg);
+}
+
+.home-two .premium-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.home-two .premium-service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 280px;
+  padding: 26px 22px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  transition: transform .3s ease, border-color .3s ease,
+              box-shadow .3s ease;
+}
+
+.home-two .premium-service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+  box-shadow: 0 14px 32px rgba(23, 75, 58, .08);
+}
+
+.home-two .service-number {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.home-two .premium-service-icon {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 23px;
+  color: var(--primary);
+  background: var(--surface-2);
+  border-radius: 12px;
+}
+
+.home-two .premium-service-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.home-two .premium-service-card h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.home-two .premium-service-card > p {
+  flex: 1;
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.home-two .premium-service-card > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-two .premium-service-card > a svg {
+  width: 15px;
+  height: 15px;
+}
+
+.home-two .premium-service-card.service-highlight {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.home-two .service-highlight .premium-service-icon {
+  color: var(--primary);
+  background: var(--secondary);
+}
+
+.home-two .service-highlight h3 {
+  color: #fff;
+}
+
+.home-two .service-highlight > p {
+  color: rgba(255, 255, 255, .8);
+}
+
+.home-two .service-highlight > a {
+  color: var(--secondary);
+}
+
+/* SECTION 4 — ABOUT */
+
+.home-two .premium-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  background: var(--surface);
+}
+
+.home-two .about-image-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.home-two .about-image-wrap > img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 5px 90px 5px 5px;
+}
+
+.home-two .about-image-caption {
+  position: absolute;
+  right: -16px;
+  bottom: 24px;
+  width: min(280px, 85%);
+  padding: 20px;
+  background: var(--bg);
+  border-left: 3px solid var(--secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.home-two .about-image-caption svg {
+  width: 22px;
+  color: var(--secondary);
+}
+
+.home-two .about-image-caption p {
+  margin: 9px 0 0;
+  color: var(--primary);
+  font-family: "Playfair Display", Georgia;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.home-two .about-content h2 {
+  margin-bottom: 20px;
+}
+
+.home-two .about-content > p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.home-two .about-points {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.home-two .about-points > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.home-two .about-points svg {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: var(--primary);
+  background: var(--surface-2);
+  border-radius: 50%;
+}
+
+/* SECTION 5 — OUR PROCESS */
+
+.home-two .premium-process {
+  background: var(--bg);
+}
+
+.home-two .process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1180px;
+  margin: auto;
+}
+
+.home-two .process-step {
+  position: relative;
+  padding: 27px 25px 10px;
+  border-top: 1px solid var(--line);
+}
+
+.home-two .process-index {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  padding: 4px 8px;
+  color: var(--secondary);
+  background: var(--bg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.home-two .process-step > svg {
+  width: 26px;
+  height: 26px;
+  margin: 8px 0 18px;
+  color: var(--primary);
+}
+
+.home-two .process-step h3 {
+  margin: 0 0 11px;
+  color: var(--primary);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.home-two .process-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* SECTION 6 — BENEFITS */
+
+.home-two .premium-benefits {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 75px;
+  color: #fff;
+  background: var(--primary);
+}
+
+.home-two .benefits-copy .eyebrow {
+  color: var(--secondary);
+}
+
+.home-two .benefits-copy h2 {
+  margin-bottom: 22px;
+  color: #fff;
+}
+
+.home-two .benefits-copy > p {
+  max-width: 440px;
+  margin: 0;
+  color: rgba(255, 255, 255, .78);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.home-two .benefit-list {
+  display: grid;
+}
+
+.home-two .benefit-list article {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
+}
+
+.home-two .benefit-list article:first-child {
+  border-top: 1px solid rgba(255, 255, 255, .18);
+}
+
+.home-two .benefit-list article > span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--secondary);
+  border: 1px solid rgba(217, 173, 104, .45);
+  border-radius: 50%;
+}
+
+.home-two .benefit-list article > span svg {
+  width: 20px;
+  height: 20px;
+}
+
+.home-two .benefit-list h3 {
+  margin: 2px 0 8px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.home-two .benefit-list p {
+  margin: 0;
+  color: rgba(255, 255, 255, .76);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* SECTION 7 — TESTIMONIALS */
+
+.home-two .premium-testimonials {
+  background: var(--surface);
+}
+
+.home-two .premium-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.home-two .premium-review {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.home-two .premium-review:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+}
+
+.home-two .premium-review.review-featured {
+  border-top: 3px solid var(--secondary);
+}
+
+.home-two .review-stars {
+  color: var(--secondary);
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+
+.home-two .review-quote {
+  width: 26px;
+  height: 26px;
+  margin: 21px 0 8px;
+  color: var(--secondary);
+}
+
+.home-two .premium-review blockquote {
+  flex: 1;
+  margin: 0 0 25px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.home-two .review-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.home-two .review-person > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.home-two .review-person h3 {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-family: "Lato", Georgia;
+  font-size: 14px;
+}
+
+.home-two .review-person p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* SECTION 8 — FINAL CTA */
+
+.home-two .premium-final-cta {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--surface-2);
+}
+
+.home-two .premium-cta-content {
+  width: min(700px, calc(100% - 40px));
+  margin: auto;
+  padding: 55px 0;
+}
+
+.home-two .premium-cta-content h2 {
+  font-size: clamp(36px, 4.5vw, 58px);
+}
+
+.home-two .premium-cta-content > p {
+  max-width: 550px;
+  margin: 20px auto 27px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.home-two .cta-decoration {
+  position: absolute;
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+.home-two .cta-decoration-one {
+  top: -130px;
+  left: -70px;
+}
+
+.home-two .cta-decoration-two {
+  right: -90px;
+  bottom: -150px;
+  width: 340px;
+  height: 340px;
+}
+
+/* Existing footer spacing only */
+.home-two .site-footer {
+  margin-top: 0;
+}
+
+/* DARK MODE — uses your existing body.dark variables */
+
+body.dark.home-two .premium-trust,
+body.dark.home-two .premium-about,
+body.dark.home-two .premium-testimonials {
+  background: var(--surface);
+}
+
+body.dark.home-two .premium-services,
+body.dark.home-two .premium-process {
+  background: var(--bg);
+}
+
+body.dark.home-two .premium-service-card,
+body.dark.home-two .premium-review {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+body.dark.home-two .premium-service-card h3,
+body.dark.home-two .premium-review blockquote,
+body.dark.home-two .review-person h3,
+body.dark.home-two .trust-item h3 {
+  color: var(--text);
+}
+
+body.dark.home-two .premium-service-card.service-highlight {
+  background: var(--surface-2);
+}
+
+body.dark.home-two .service-highlight h3 {
+  color: var(--text);
+}
+
+body.dark.home-two .service-highlight > p {
+  color: var(--muted);
+}
+
+body.dark.home-two .premium-benefits {
+  background: #10251B;
+}
+
+body.dark.home-two .premium-final-cta {
+  background: var(--surface);
+}
+
+body.dark.home-two .about-image-caption {
+  background: var(--surface);
+}
+
+body.dark.home-two .about-image-caption p {
+  color: var(--text);
+}
+
+/* ===================================
+   1024px
+=================================== */
+
+@media (max-width: 1024px) {
+  .home-two .section-padding {
+    padding: 72px 32px;
+  }
+
+  .home-two .premium-trust {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .home-two .premium-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-two .premium-about {
+    gap: 42px;
+  }
+
+  .home-two .about-image-wrap > img {
+    height: 400px;
+  }
+
+  .home-two .premium-benefits {
+    gap: 42px;
+  }
+}
+
+/* ===================================
+   768px
+=================================== */
+
+@media (max-width: 768px) {
+  .home-two .section-padding {
+    padding: 60px 24px;
+  }
+
+  .home-two .premium-hero {
+    height: calc(100svh - 70px);
+    min-height: 520px;
+  }
+
+  .home-two .premium-hero h1 {
+    font-size: clamp(40px, 8vw, 60px);
+    letter-spacing: -.8px;
+  }
+
+  .home-two .premium-hero-content > p {
+    font-size: 14px;
+  }
+
+  .home-two .trust-items {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .home-two .trust-item {
+    align-items: center;
+  }
+
+  .home-two .premium-about {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .home-two .about-image-wrap > img {
+    height: 390px;
+  }
+
+  .home-two .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 12px;
+  }
+
+  .home-two .process-step {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .home-two .premium-benefits {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .home-two .premium-review-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .home-two .premium-review {
+    padding: 25px;
+  }
+
+  .home-two .premium-final-cta {
+    min-height: 360px;
+  }
+}
+
+/* ===================================
+   360px
+=================================== */
+
+@media (max-width: 360px) {
+  .home-two .section-padding {
+    padding: 46px 16px;
+  }
+
+  .home-two .premium-hero {
+    height: calc(100svh - 64px);
+    min-height: 490px;
+  }
+
+  .home-two .hero-background {
+    background-position: 58% center;
+  }
+
+  .home-two .hero-overlay {
+    background: rgba(9, 34, 24, .78);
+  }
+
+  .home-two .premium-hero-content {
+    width: calc(100% - 28px);
+    padding: 24px 0 40px;
+  }
+
+  .home-two .hero-eyebrow {
+    gap: 6px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .home-two .eyebrow-line {
+    width: 17px;
+  }
+
+  .home-two .premium-hero h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    letter-spacing: -.6px;
+  }
+
+  .home-two .premium-hero-content > p {
+    margin: 17px auto 21px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home-two .hero-actions {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .home-two .hero-actions .btn {
+    width: 100%;
+  }
+
+  .home-two .hero-assurance {
+    gap: 12px;
+    margin-top: 21px;
+  }
+
+  .home-two .hero-assurance span {
+    font-size: 10px;
+  }
+
+  .home-two .hero-scroll-cue {
+    bottom: 10px;
+    font-size: 8px;
+  }
+
+  .home-two .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .home-two .section-heading h2,
+  .home-two .trust-intro h2,
+  .home-two .about-content h2,
+  .home-two .benefits-copy h2,
+  .home-two .premium-cta-content h2 {
+    font-size: 33px;
+    letter-spacing: -.5px;
+  }
+
+  .home-two .section-heading > p {
+    font-size: 13px;
+  }
+
+  .home-two .premium-service-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home-two .premium-service-card {
+    min-height: 235px;
+    padding: 22px;
+  }
+
+  .home-two .about-image-wrap > img {
+    height: 290px;
+    border-top-right-radius: 60px;
+  }
+
+  .home-two .about-image-caption {
+    right: 8px;
+    bottom: 12px;
+    padding: 14px;
+  }
+
+  .home-two .about-image-caption p {
+    font-size: 15px;
+  }
+
+  .home-two .process-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .home-two .process-step {
+    padding: 24px 15px 0;
+  }
+
+  .home-two .benefit-list article {
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .home-two .benefit-list article > span {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home-two .benefit-list h3 {
+    font-size: 17px;
+  }
+
+  .home-two .premium-review {
+    padding: 21px;
+  }
+
+  .home-two .premium-final-cta {
+    min-height: 340px;
+  }
+
+  .home-two .premium-cta-content {
+    width: calc(100% - 32px);
+  }
+}
+
+/* RTL SUPPORT */
+
+html[dir="rtl"] .home-two .about-image-caption {
+  right: auto;
+  left: -16px;
+}
+
+html[dir="rtl"] .home-two .process-index {
+  right: 24px;
+  left: auto;
+}
+
+html[dir="rtl"] .home-two .service-number {
+  right: auto;
+  left: 22px;
+}
+/* DARK MODE VISIBILITY FIX — HOME 2 */
+
+/* 1. Headings and highlighted text */
+body.dark .premium-trust h2,
+body.dark .premium-services h2,
+body.dark .premium-process h2,
+body.dark .premium-benefits h2,
+body.dark .trust-intro h2,
+body.dark .about-content h2 {
+    color: #F1F2EB;
+}
+
+body.dark .premium-trust h2 em,
+body.dark .premium-services h2 em,
+body.dark .premium-process h2 em,
+body.dark .premium-benefits h2 em,
+body.dark .trust-intro h2 em,
+body.dark .about-content h2 em {
+    color: var(--secondary);
+}
+
+/* 2. Trust section icons */
+body.dark .trust-item > i {
+    color: var(--secondary);
+    stroke: var(--secondary);
+}
+
+/* 3. Service card icons */
+body.dark .premium-service-icon,
+body.dark .premium-service-icon i,
+body.dark .premium-service-icon svg {
+    color: var(--secondary);
+    stroke: var(--secondary);
+}
+
+body.dark .premium-service-icon {
+    background: var(--surface-2);
+}
+
+/* 4. Service card links */
+body.dark .premium-service-card .card-link,
+body.dark .premium-service-card .card-link i,
+body.dark .premium-service-card .card-link svg {
+    color: var(--secondary);
+    stroke: var(--secondary);
+}
+
+/* 5. Process section icons and headings */
+body.dark .process-step > i,
+body.dark .process-step > svg {
+    color: var(--secondary);
+    stroke: var(--secondary);
+}
+
+body.dark .process-step h3 {
+    color: #F1F2EB;
+}
+
+/* 6. About section checklist icons */
+body.dark .about-points i,
+body.dark .about-points svg {
+    color: var(--secondary);
+    stroke: var(--secondary);
+}
+
+/* 7. General paragraph visibility */
+body.dark .trust-item p,
+body.dark .premium-service-card p,
+body.dark .process-step p,
+body.dark .about-content > p {
+    color: var(--muted);
+}
+
+/* 8. CTA section text */
+body.dark .premium-cta h2,
+body.dark .premium-cta p {
+    color: #F1F2EB;
+}
+
+body.dark .premium-cta h2 em {
+    color: var(--secondary);
+}
+/* HOME 2 — DARK MODE FIX */
+
+/* 1. Trust section: all three icons */
+body.dark.home-two .premium-trust .trust-item > i {
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+    opacity: 1 !important;
+}
+
+/* 2. Accounting card: calculator icon */
+body.dark.home-two .premium-service-card.service-highlight
+.premium-service-icon {
+    background: var(--secondary) !important;
+}
+
+body.dark.home-two .premium-service-card.service-highlight
+.premium-service-icon i,
+body.dark.home-two .premium-service-card.service-highlight
+.premium-service-icon svg {
+    color: var(--primary) !important;
+    stroke: var(--primary) !important;
+    opacity: 1 !important;
+}
+
+/* 3. Explore service links — actual HTML has direct anchor links */
+body.dark.home-two .premium-service-card > a {
+    color: var(--secondary) !important;
+    opacity: 1 !important;
+}
+
+body.dark.home-two .premium-service-card > a i,
+body.dark.home-two .premium-service-card > a svg {
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+    opacity: 1 !important;
+}
+
+/* 4. CTA heading: white first line, gold second line */
+body.dark.home-two .premium-final-cta .premium-cta-content h2 {
+    color: #FFFFFF !important;
+}
+
+body.dark.home-two .premium-final-cta .premium-cta-content h2 em {
+    color: var(--secondary) !important;
+}
+
+/* CTA description */
+body.dark.home-two .premium-final-cta .premium-cta-content > p {
+    color: var(--muted) !important;
+}
