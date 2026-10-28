@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ledgerly | Client Dashboard</title>
-    <link rel="icon" type="image/png" sizes="184x184" href="images/logo_transparent_image.png">
+    <link rel="icon" type="image/png" sizes="184x184" href="images/Logoo_tax.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
     </label>
 
     <a href="index.html" class="topbar-brand">
-        <img src="images/logo_transparent_image.png" alt="Ledgerly logo">
+        <img src="images/Logoo_tax.png" alt="Ledgerly logo">
         <span>Ledger<span class="gold">ly</span></span>
     </a>
 
@@ -46,19 +46,54 @@
         </button>
 
         <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL">
-            <i data-lucide="languages"></i>
+            <i data-lucide="arrow-left-right"></i>
         </button>
 
         <button class="icon-btn" id="notification-btn" aria-label="Notifications">
             <i data-lucide="bell"></i>
         </button>
 
+        
+<div class="profile-menu">
+    <button class="profile-trigger" id="profile-trigger"
+            type="button" aria-expanded="false"
+            aria-controls="profile-dropdown">
         <span class="avatar">S</span>
-
         <span class="user-info">
             <b>Srinidhi</b>
             <small>Client account</small>
         </span>
+        <i data-lucide="chevron-down"></i>
+    </button>
+
+    <div class="profile-dropdown" id="profile-dropdown" hidden>
+        <div class="profile-dropdown-heading">
+            <span class="avatar">S</span>
+            <div>
+                <b>Srinidhi</b>
+                <small>Client account</small>
+            </div>
+        </div>
+
+        <button type="button" data-profile-section="profile">
+            <i data-lucide="user-round"></i>
+            My Profile
+        </button>
+
+        <button type="button" data-profile-section="settings">
+            <i data-lucide="bell"></i>
+            Notifications
+        </button>
+
+        <div class="profile-dropdown-divider"></div>
+
+        <button type="button" id="logout-btn" class="profile-logout">
+            <i data-lucide="log-out"></i>
+            Log Out
+        </button>
+    </div>
+</div>
+
     </div>
 </header>
 

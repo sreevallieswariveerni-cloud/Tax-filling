@@ -489,3 +489,82 @@ body.dark .auth-brand-name {
 body.dark .auth-brand-name span {
     color: var(--secondary);
 }
+
+
+/* Social login divider */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 18px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+/* Apple and Google buttons */
+.auth-social-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.auth-social-button {
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 13px;
+    font-weight: 600;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.auth-social-button:hover {
+    border-color: var(--secondary);
+    background: var(--surface-2);
+}
+
+.auth-social-button svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+/* Dark mode */
+body.dark .auth-social-button {
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--line);
+}
+
+body.dark .auth-social-button:hover {
+    border-color: var(--secondary);
+    background: var(--surface-2);
+}
+
+/* Small screens */
+@media (max-width: 360px) {
+    .auth-social-buttons {
+        gap: 8px;
+    }
+
+    .auth-social-button {
+        gap: 6px;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+}

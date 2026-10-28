@@ -377,6 +377,39 @@ document.addEventListener("DOMContentLoaded", () => {
     todoCheckboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", updateTodoCount);
     });
+    
+/* PROFILE DROPDOWN */
+const profileTrigger = document.getElementById("profile-trigger");
+const profileDropdown = document.getElementById("profile-dropdown");
+
+profileTrigger?.addEventListener("click", () => {
+    const isOpen = profileTrigger.getAttribute("aria-expanded") === "true";
+
+    profileTrigger.setAttribute("aria-expanded", String(!isOpen));
+    profileDropdown.hidden = isOpen;
+
+    if (!isOpen) {
+        refreshIcons();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (
+        profileDropdown &&
+        !event.target.closest(".profile-menu")
+    ) {
+        profileDropdown.hidden = true;
+        profileTrigger?.setAttribute("aria-expanded", "false");
+    }
+});
+
+profileDropdown?.querySelectorAll("[data-profile-section]").forEach((button) => {
+    button.addEventListener("click", () => {
+        openSection(button.dataset.profileSection);
+        profileDropdown.hidden = true;
+        profileTrigger?.setAttribute("aria-expanded", "false");
+    });
+});
 
     /* NOTIFICATIONS AND SIGN OUT */
 

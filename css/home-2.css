@@ -275,57 +275,224 @@
 
 /* SECTION 2 — TRUST */
 
+/* SECTION 2 — PROFESSIONAL TRUST LAYOUT */
+
 .home-two .premium-trust {
   display: grid;
-  grid-template-columns: .9fr 1.5fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
-  gap: 50px;
-  background: var(--surface);
+  gap: clamp(35px, 5vw, 75px);
+  background: var(--bg);
+  padding: 90px 5.1%;
 }
 
-.home-two .trust-intro h2 {
-  max-width: 420px;
-  font-size: clamp(30px, 3.2vw, 43px);
+.home-two .trust-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 480px;
 }
 
-.home-two .trust-intro > p {
-  margin: 16px 0 0;
-  color: var(--muted);
+.home-two .trust-visual > img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.home-two .trust-image-note {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(16, 20, 17, 0.88);
+  color: #fff;
+  backdrop-filter: blur(12px);
+}
+
+.home-two .trust-image-note > i {
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  flex-shrink: 0;
+  color: var(--secondary);
+  border: 1px solid rgba(217, 173, 104, 0.45);
+  border-radius: 10px;
+}
+
+.home-two .trust-image-note strong,
+.home-two .trust-image-note span {
+  display: block;
+}
+
+.home-two .trust-image-note strong {
   font-size: 14px;
+  line-height: 1.5;
+}
+
+.home-two .trust-image-note span {
+  margin-top: 3px;
+  color: #d8dfd9;
+  font-size: 12px;
+}
+
+.home-two .trust-content {
+  min-width: 0;
+}
+
+.home-two .trust-content .eyebrow {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.home-two .trust-content h2 {
+  max-width: 560px;
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(34px, 3.7vw, 52px);
+  line-height: 1.18;
+}
+
+.home-two .trust-content h2 em {
+  color: var(--secondary);
+  font-style: normal;
+}
+
+.home-two .trust-description {
+  max-width: 560px;
+  margin: 18px 0 25px;
+  color: var(--muted);
+  font-size: 15px;
   line-height: 1.9;
 }
 
 .home-two .trust-items {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-bottom: 26px;
 }
 
 .home-two .trust-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.home-two .trust-item > svg {
-  width: 25px;
-  height: 25px;
+.home-two .trust-item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.home-two .trust-item-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
   flex-shrink: 0;
   color: var(--primary);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+
+.home-two .trust-item-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .home-two .trust-item h3 {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   color: var(--text);
-  font-family: "Lato", Georgia;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .home-two .trust-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Use the same global primary button design */
+.home-two .trust-button {
+  color: #fff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  text-decoration: none;
+}
+
+.home-two .trust-button:hover {
+  color: #1D2B23;
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.home-two .trust-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Dark mode */
+body.dark .home-two .trust-content .eyebrow {
+  color: var(--secondary);
+}
+
+body.dark .home-two .trust-item-icon {
+  color: var(--secondary);
+  background: var(--surface-2);
+  border-color: var(--line);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-two .premium-trust {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 60px 5.1%;
+  }
+
+  .home-two .trust-visual {
+    min-height: 320px;
+  }
+
+  .home-two .trust-visual > img {
+    height: 320px;
+  }
+
+  .home-two .trust-content h2 {
+    font-size: clamp(32px, 7vw, 42px);
+  }
+}
+
+@media (max-width: 360px) {
+  .home-two .premium-trust {
+    padding: 45px 20px;
+  }
+
+  .home-two .trust-visual,
+  .home-two .trust-visual > img {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .home-two .trust-image-note {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 12px;
+  }
+
+  .home-two .trust-content h2 {
+    font-size: 30px;
+  }
 }
 
 /* SECTION 3 — SERVICES */
@@ -1242,4 +1409,94 @@ body.dark.home-two .premium-final-cta .premium-cta-content h2 em {
 /* CTA description */
 body.dark.home-two .premium-final-cta .premium-cta-content > p {
     color: var(--muted) !important;
+}
+
+.home-two .hero-actions .btn-secondary {
+  color: #fff;
+  background: transparent;
+  border: 1px solid var(--secondary);
+}
+
+.home-two .hero-actions .btn-secondary:hover {
+  color: #1D2B23;
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.home-two .hero-actions .btn-secondary svg {
+  width: 17px;
+  height: 17px;
+  color: currentColor;
+}
+
+/* Fix Home 2 trust section alignment */
+.home-two .premium-trust {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  padding: 80px var(--gutter);
+  overflow: hidden;
+}
+
+.home-two .trust-visual {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.home-two .trust-visual > img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+}
+
+.home-two .trust-content {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.home-two .trust-content h2,
+.home-two .trust-description {
+  max-width: 100%;
+}
+
+.home-two .trust-items {
+  width: 100%;
+}
+
+.home-two .trust-item {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.home-two .trust-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+  .home-two .premium-trust {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 55px var(--gutter);
+  }
+
+  .home-two .trust-visual > img {
+    height: 320px;
+  }
+
+  .home-two .trust-content {
+    width: 100%;
+  }
 }
